@@ -1,0 +1,101 @@
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    background-color: #211717;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: space-between;
+}
+
+main {
+    margin: 0;
+    height: 100%;
+    width: 60%;
+}
+
+aside {
+    perspective: 1000px;
+    padding: 20px 10px;
+    margin: 0;
+    height: 100%;
+    width: 40%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+    align-content: space-between;
+    /* border: 1px solid white; */
+    overflow: hidden;
+}
+
+.nav-div {
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    /* border: 1px solid white; */
+    width: 70%;
+    height: auto;
+    transform: rotate3d(-0.5,1,0,-45deg);
+    transition: all 0.5s ease-in-out;
+}
+
+@keyframes turn-blink {
+    0% {color:#dfddc7}
+    10% {color:lightgrey;}
+    20% {color:#f58b54;}
+    30% {color:white;}
+    50%{color: #f58b54;}
+}
+
+.nav-div:hover .nav-text {
+    animation: turn-blink 0.5s ease-in-out 0s 1;
+    color: #a34a28;;
+}
+
+.nav-div:hover {
+    transform: rotate3d(0,0,0,0deg);
+}
+
+.nav-text {
+    margin: 0;
+    padding: 0;
+    color: #dfddc7;
+    font-size: 5rem;
+}
+
+main {
+    position: relative;
+    height: 100%;
+}
+
+#image {
+    margin: 0;
+    height: 50%;
+    width: 50%;
+    background-image: url("./profile.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 200px;
+    left: 400px;
+}
+
+#heading {
+    font-size: 4rem;
+    color: #f58b54;
+    font-family: monospace;
+}
+
+#text {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-family: monospace;
+    color: white;
+}
